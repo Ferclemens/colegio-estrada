@@ -24,17 +24,17 @@
         }
 
         :root {
-            --violet: #5B3F8C;
-            --pink: #D95786;
-            --teal: #2C7A78;
-            --paper: #F7F4EF;
-            --white: #fff;
-            --lavender: #EEE8F5;
-            --ink: #272331;
-            --muted: #625C68;
-            --line: #D9D1DE;
-            --focus: #F0A62B;
-            --shadow: 0 6px 18px rgba(39, 35, 49, .08);
+            --violet: #2C3A5A;
+            --pink: #ED2D7C;
+            --teal: #F4A99C;
+            --paper: #FFF5EC;
+            --white: #FFFFFF;
+            --lavender: #EEA9A9;
+            --ink: #2C3A5A;
+            --muted: #666666;
+            --line: #F4A99C;
+            --focus: #F4A99C;
+            --shadow: 0 6px 18px rgba(44, 58, 90, .10);
         }
 
         * {
@@ -200,13 +200,15 @@
         }
 
         .button-primary {
-            background: var(--violet);
-            color: #fff;
-            box-shadow: 0 5px 0 #412668;
+            background: var(--pink);
+            border-color: var(--pink);
+            color: var(--white);
+            box-shadow: 0 5px 0 #B91E60;
         }
 
         .button-primary:hover {
-            background: #473174;
+            background: #D7216C;
+            border-color: #D7216C;
         }
 
         .button-secondary {
@@ -239,11 +241,11 @@
         }
 
         .hero-copy .eyebrow {
-            color: var(--teal);
+            color: var(--violet);
         }
 
         .hero-copy h1 span {
-            color: var(--violet);
+            color: var(--pink);
         }
 
         .hero-text {
@@ -346,7 +348,7 @@
         }
 
         .mission-card:nth-child(2) {
-            background: var(--lavender);
+            background: var(--paper);
         }
 
         .mission-card h3 {
@@ -378,7 +380,7 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            background: var(--white);
+            background: var(--paper);
             border: 1px solid var(--line);
             border-radius: 12px;
             box-shadow: var(--shadow);
@@ -401,9 +403,9 @@
 
         .adult-card {
             position: relative;
-            background: var(--teal);
-            border-color: var(--teal);
-            color: #fff;
+            background: var(--violet);
+            border-color: var(--violet);
+            color: var(--white);
         }
 
         .adult-card:before {
@@ -418,7 +420,7 @@
         }
 
         .adult-card h3 {
-            color: #fff;
+            color: var(--white);
         }
 
         .adult-card p+p {
@@ -442,7 +444,7 @@
         .value {
             min-height: 154px;
             padding: 19px 15px;
-            background: var(--white);
+            background: var(--paper);
             border: 1px solid var(--line);
             border-radius: 12px;
         }
@@ -469,7 +471,7 @@
             position: relative;
             padding: 70px 0;
             background: var(--violet);
-            color: #fff;
+            color: var(--white);
             overflow: hidden;
         }
 
@@ -480,12 +482,12 @@
             height: 300px;
             right: -110px;
             top: -110px;
-            border: 48px solid rgba(217, 87, 134, .32);
+            border: 48px solid rgba(237, 45, 124, .32);
             border-radius: 50%;
         }
 
         .conversion .eyebrow {
-            color: #ffd7e5;
+            color: var(--teal);
         }
 
         .form-grid {
@@ -497,16 +499,16 @@
 
         .form-intro p {
             margin-top: 16px;
-            color: #f0eafb;
+            color: var(--paper);
             max-width: 450px;
         }
 
         .contact-form {
             padding: 23px;
-            background: var(--white);
+            background: var(--paper);
             color: var(--ink);
             border-radius: 12px;
-            box-shadow: 0 12px 30px rgba(22, 13, 38, .25);
+            box-shadow: 0 12px 30px rgba(44, 58, 90, .25);
         }
 
         .field-grid {
@@ -535,7 +537,7 @@
             padding: 12px;
             border: 1px solid var(--line);
             border-radius: 6px;
-            background: #fff;
+            background: var(--white);
             color: var(--ink);
             font: inherit;
             font-size: 1rem;
@@ -546,7 +548,7 @@
         textarea:focus {
             outline: 3px solid var(--focus);
             outline-offset: 1px;
-            border-color: var(--violet);
+            border-color: var(--pink);
         }
 
         textarea {
@@ -566,8 +568,8 @@
 
         footer {
             padding: 32px 0;
-            background: #272331;
-            color: #fff;
+            background: var(--violet);
+            color: var(--white);
         }
 
         .footer-row {
@@ -598,7 +600,7 @@
 
         .footer-brand span,
         .footer-note {
-            color: #d9d1de;
+            color: var(--paper);
             font-size: .85rem;
         }
 
@@ -609,7 +611,7 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
-            background: rgba(39, 35, 49, .62);
+            background: rgba(44, 58, 90, .62);
         }
 
         .thank-you-modal-card {
