@@ -50,6 +50,13 @@
   box-shadow: 0 12px 30px rgba(44, 58, 90, 0.25);
 }
 
+.contact-fields {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 .field-grid {
   display: grid;
   gap: 16px;
@@ -103,6 +110,12 @@ textarea {
 
 .submit {
   width: 100%;
+}
+
+.submit:disabled {
+  cursor: not-allowed;
+  filter: grayscale(0.5);
+  opacity: 0.65;
 }
 
 @media (min-width: 700px) {
