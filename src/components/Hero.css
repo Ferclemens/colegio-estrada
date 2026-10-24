@@ -77,7 +77,7 @@
 
 @media (min-width: 700px) {
   .hero {
-    padding: 64px 0 86px;
+    padding: 320px 0 86px;
   }
 
   .hero-visual:after {
@@ -89,6 +89,9 @@
 
   .hero-grid {
     grid-template-columns: 1fr;
+  }
+  .hero-copy h1 {
+    font-size: 4.2rem;
   }
 }
 

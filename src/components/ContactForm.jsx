@@ -18,8 +18,14 @@ export default function ContactForm() {
             Comencemos a construir su <span>recorrido educativo</span>
           </h2>
           <p>
-            La recepción de consultas en línea estará disponible próximamente.
+            Nuestro equipo está disponible para brindar información sobre
+            niveles, turnos, vacantes y proceso de inscripción.
           </p>
+          <p>Información e inscripción:</p>
+          <p>inscripciones.jme@gmail.com</p>
+          <p>Nivel Inicial: 3624 161234</p>
+          <p>Nivel Primario: 3624 361076</p>
+          <p>Nivel Secundario: 3625 166260</p>
         </div>
         <form className="contact-form">
           <fieldset

@@ -105,14 +105,14 @@ section {
   align-items: center;
   justify-content: center;
   gap: 9px;
-  padding: 11px 18px;
+  padding: 5px 5px;
   border: 1px solid var(--violet);
   border-radius: 12px;
   font:
-    700 0.88rem/1.1 "Barlow Semi Condensed",
+    400 0.88rem/1.1 "Barlow Semi Condensed",
     Arial,
     sans-serif;
-  letter-spacing: 0.06em;
+
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
