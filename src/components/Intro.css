@@ -1,0 +1,41 @@
+.intro-grid {
+  display: grid;
+  gap: 28px;
+}
+
+.intro-lead {
+  margin-top: 18px;
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 570px;
+}
+
+.mission-cards {
+  display: grid;
+  gap: 15px;
+}
+
+.mission-card {
+  padding: 25px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.mission-card:nth-child(2) {
+  background: var(--paper);
+}
+
+.mission-card h3 {
+  color: var(--violet);
+  margin-bottom: 9px;
+}
+
+@media (min-width:700px) {
+  .intro-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 58px;
+  }
+}

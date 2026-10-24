@@ -1,0 +1,127 @@
+.conversion {
+  position: relative;
+  padding: 70px 0;
+  background: var(--paper);
+  color: var(--ink);
+  border-top: 1px solid rgba(91, 63, 140, 0.12);
+  overflow: hidden;
+}
+
+.conversion::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  background:
+    linear-gradient(rgba(8, 8, 8, 0.741) 35%, rgba(66, 65, 64, 0.461)),
+    url("../assets/circulo_escolar.webp") center / cover no-repeat;
+}
+
+.form-grid {
+  display: grid;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.form-intro p {
+  margin-top: 16px;
+  color: var(--paper);
+  max-width: 450px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+.form-intro h2 {
+  color: var(--violet--title);
+  text-shadow: 0px 2px 2px rgb(7, 39, 153);
+}
+
+.form-intro span {
+  color: var(--pink);
+  text-shadow: 0px 2px 2px rgb(153, 7, 117);
+}
+
+.contact-form {
+  padding: 23px;
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(44, 58, 90, 0.25);
+}
+
+.field-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+label {
+  color: var(--ink);
+  font-family: "Barlow Semi Condensed", Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--focus);
+  outline-offset: 1px;
+  border-color: var(--pink);
+}
+
+textarea {
+  min-height: 106px;
+  resize: vertical;
+}
+
+.form-note {
+  margin: 15px 0 19px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.submit {
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .form-grid {
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 65px;
+  }
+
+  .field-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .field.message,
+  .field.level {
+    grid-column: span 2;
+  }
+
+  .contact-form {
+    padding: 31px;
+  }
+}

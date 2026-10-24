@@ -1,0 +1,65 @@
+.levels {
+  background: var(--lavender);
+}
+
+.levels-grid {
+  display: grid;
+  gap: 20px;
+}
+.level-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.level-image {
+  width: 100%;
+  height: 205px;
+  object-fit: cover;
+}
+
+.level-body {
+  padding: 23px;
+}
+
+.level-body h3 {
+  color: var(--violet);
+  margin-bottom: 9px;
+}
+
+.adult-card {
+  position: relative;
+  background: var(--violet);
+  border-color: var(--violet);
+  color: var(--white);
+}
+
+.adult-card p {
+  color: var(--white);
+}
+
+.adult-card h3 {
+  color: var(--white);
+}
+
+.adult-card p {
+  margin-top: 11px;
+}
+
+.address {
+  font-family: "Barlow Semi Condensed", Arial, sans-serif;
+  font-size: 0.83rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 700px) {
+  .levels-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

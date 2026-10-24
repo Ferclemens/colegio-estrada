@@ -1,0 +1,37 @@
+footer {
+  padding: 32px 0;
+  background: var(--violet);
+  color: var(--white);
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.footer-brand img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.footer-brand strong {
+  display: block;
+  font-family: Fraunces, Georgia, serif;
+  font-weight: 650;
+}
+
+.footer-brand span,
+.footer-note {
+  color: var(--paper);
+  font-size: .85rem;
+}

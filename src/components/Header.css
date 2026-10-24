@@ -1,0 +1,90 @@
+.site-header {
+  position: relative;
+  z-index: 2;
+  background: var(--paper);
+  border-bottom: 1px solid rgba(91, 63, 140, 0.12);
+}
+
+.header-row {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  min-width: 0;
+}
+
+.brand img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.brand-title {
+  display: block;
+  font-family: "JM Estrada", Fraunces, Georgia, serif;
+  color: var(--violet);
+  font-size: 1.1rem;
+  line-height: 1.05;
+}
+
+.brand-sub {
+  display: block;
+  color: var(--muted);
+  font-family: "Barlow Semi Condensed", Arial, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: none;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-links a {
+  color: var(--violet);
+  font-family: "Barlow Semi Condensed", Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--pink);
+  text-decoration-thickness: 2px;
+}
+
+.header-cta {
+  display: flex;
+}
+
+@media (min-width: 700px) {
+  .header-cta {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 960px) {
+  .nav-links {
+    display: flex;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-title {
+    font-size: 0.95rem;
+  }
+}
