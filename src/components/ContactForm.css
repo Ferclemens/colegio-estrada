@@ -1,50 +1,82 @@
 .conversion {
   position: relative;
-  padding: 70px 0;
+  padding: 80px 0;
   background: var(--paper);
   color: var(--ink);
-  border-top: 1px solid rgba(91, 63, 140, 0.12);
   overflow: hidden;
-}
-
-.conversion::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  inset: 0;
-  background: var(--lavender);
 }
 
 .form-grid {
   display: grid;
-  gap: 30px;
+  gap: 40px;
   position: relative;
   z-index: 1;
 }
 
-.form-intro p {
-  margin-top: 16px;
+/* Columna izquierda: Información institucional */
+.form-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-intro .eyebrow {
   color: var(--violet);
-  max-width: 450px;
+  background: rgba(44, 58, 90, 0.08);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
 }
 
 .form-intro h2 {
   color: var(--violet);
-  text-shadow: 0px 2px 2px rgb(8, 28, 99);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  line-height: 1.15;
+  margin: 0;
+  text-shadow: none;
 }
 
-.form-intro span {
+.form-intro h2 span {
   color: var(--pink);
-  text-shadow: 2px 2px 2px rgb(153, 7, 117);
+  text-shadow: none;
 }
 
-.contact-form {
-  padding: 23px;
-  background: var(--paper);
+.form-intro > p {
+  margin-top: 18px;
   color: var(--ink);
-  border-radius: 12px;
-  box-shadow: 0 12px 30px rgba(44, 58, 90, 0.25);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.contact-direct-info {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+.contact-direct-info a {
+  color: var(--pink);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.contact-direct-info span {
+  font-weight: 600;
+  color: var(--violet);
+}
+
+/* Columna derecha: Tarjeta del Formulario */
+.contact-form {
+  padding: 32px 28px;
+  background: var(--white);
+  color: var(--ink);
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(44, 58, 90, 0.12);
+  border: 1px solid rgba(44, 58, 90, 0.08);
 }
 
 .contact-fields {
@@ -55,22 +87,23 @@
 }
 
 .field-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
 }
 
 .field {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 6px;
 }
 
 label {
   color: var(--ink);
   font-family: "Barlow Semi Condensed", Arial, sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 700;
-  letter-spacing: 0.065em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
@@ -78,61 +111,132 @@ input,
 select,
 textarea {
   width: 100%;
-  padding: 12px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: var(--white);
+  padding: 12px 14px;
+  border: 1.5px solid #e2dcd5;
+  border-radius: 8px;
+  background: var(--paper);
   color: var(--ink);
   font: inherit;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 3px solid var(--focus);
-  outline-offset: 1px;
+  outline: none;
   border-color: var(--pink);
+  box-shadow: 0 0 0 3px rgba(252, 86, 155, 0.2);
+  background: var(--white);
 }
 
 textarea {
-  min-height: 106px;
+  min-height: 110px;
   resize: vertical;
 }
 
-.form-note {
-  margin: 15px 0 19px;
-  color: var(--muted);
-  font-size: 0.9rem;
+/* Checkbox de privacidad */
+.field.privacy-checkbox {
+  margin-top: 6px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  text-transform: none;
+  font-weight: 400;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--pink);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* Retroalimentación de estados */
+.form-feedback {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  margin: 18px 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.form-feedback.success {
+  background-color: #eaf8f0;
+  color: #1e7e48;
+  border: 1px solid #b7ebcc;
+}
+
+.form-feedback.error {
+  background-color: #fdebee;
+  color: #b91e36;
+  border: 1px solid #f8c1cb;
 }
 
 .submit {
   width: 100%;
+  margin-top: 8px;
 }
 
 .submit:disabled {
   cursor: not-allowed;
-  filter: grayscale(0.5);
+  filter: grayscale(0.6);
   opacity: 0.65;
 }
 
-@media (min-width: 850px) {
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   RESPONSIVE EN ESCRITORIO
+   ========================================= */
+@media (min-width: 900px) {
+  .conversion {
+    padding: 100px 0;
+  }
+
   .form-grid {
-    grid-template-columns: 0.85fr 1.15fr;
-    align-items: center;
-    gap: 65px;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: start;
+    gap: 64px;
+  }
+
+  .contact-form {
+    padding: 40px 36px;
   }
 
   .field-grid {
     grid-template-columns: 1fr 1fr;
   }
 
+  /* Campos que ocupan el ancho completo de dos columnas */
   .field.message,
-  .field.level {
+  .field.level,
+  .field.privacy-checkbox {
     grid-column: span 2;
-  }
-
-  .contact-form {
-    padding: 31px;
   }
 }
