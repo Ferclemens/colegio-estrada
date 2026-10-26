@@ -1,0 +1,188 @@
+.community-banner {
+  position: relative;
+  padding: 72px 0 88px;
+  background-color: var(--paper);
+  overflow: hidden;
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* =========================================
+   LADO IZQUIERDO: VISUAL ORGÁNICO
+   ========================================= */
+.community-visual {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mancha de fondo desfasada con orientación opuesta a la del Hero */
+.community-blob-backdrop {
+  position: absolute;
+  inset: -12px 20px -18px -15px;
+  background: linear-gradient(135deg, var(--teal) 0%, var(--pink) 100%);
+  border-radius: 42% 58% 68% 32% / 55% 42% 58% 45%;
+  opacity: 0.9;
+  filter: blur(1px);
+  z-index: 0;
+  transform: rotate(4deg);
+  transition: transform 0.4s ease;
+}
+
+/* Contenedor adaptado a la ronda de estudiantes */
+.community-blob-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  border-radius: 46% 54% 59% 41% / 43% 57% 43% 57%;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 20px 45px rgba(44, 58, 90, 0.18);
+  border: 4px solid var(--white);
+  background-color: var(--paper);
+}
+
+.community-blob-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  pointer-events: none;
+}
+
+.community-blob-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Centrado para enfocar el círculo central de pies y colchonetas */
+  object-position: center 50%;
+  transform: scale(1.02);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Pequeña pastilla flotante decorativa */
+.community-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  background: var(--white);
+  color: var(--violet);
+  padding: 8px 16px;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(44, 58, 90, 0.15);
+  border: 1px solid var(--paper);
+  z-index: 2;
+  font-family: "Barlow Semi Condensed", Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* =========================================
+   LADO DERECHO: TEXTO Y CONTENIDO
+   ========================================= */
+.community-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+}
+
+.community-eyebrow {
+  margin: 0 0 14px;
+  color: var(--violet);
+  background: var(--paper);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-family: "Barlow Semi Condensed", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.community-copy h2 {
+  color: var(--violet);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  line-height: 1.15;
+  margin: 0;
+}
+
+.community-copy h2 span {
+  color: var(--pink);
+  display: inline;
+}
+
+.community-description {
+  margin-top: 20px;
+  color: var(--ink);
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+/* Lista de ítems institucionales */
+.community-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.community-highlights li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.highlight-icon {
+  color: var(--pink);
+  flex-shrink: 0;
+}
+
+/* =========================================
+   BREAKPOINTS RESPONSIVE
+   ========================================= */
+@media (min-width: 960px) {
+  .community-banner {
+    padding: 96px 0 110px;
+  }
+
+  .community-grid {
+    grid-template-columns: 1.15fr 1fr;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .community-banner {
+    padding: 48px 0 60px;
+  }
+
+  .community-badge {
+    bottom: -10px;
+    right: 50%;
+    transform: translateX(50%);
+    white-space: nowrap;
+  }
+
+  .community-blob-wrapper {
+    aspect-ratio: 1 / 1;
+  }
+}

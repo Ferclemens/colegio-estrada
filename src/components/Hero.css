@@ -1,102 +1,161 @@
 .hero {
   position: relative;
-  padding: 42px 0 58px;
+  padding: 60px 0 80px;
+  background-color: var(--paper);
   overflow: hidden;
-  --parallax: 0px;
-}
-
-.hero-visual {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-
-.hero-visual:after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    rgba(25, 25, 25, 0.163) 15%,
-    rgba(33, 32, 32, 0.934)
-  );
-}
-
-.hero-visual img {
-  position: absolute;
-  left: 0;
-  top: -15%;
-  width: 100%;
-  height: 130%;
-  object-fit: cover;
-  transform: translate3d(0, var(--parallax), 0);
-  will-change: transform;
 }
 
 .hero-grid {
-  position: relative;
-  height: 100%;
-  z-index: 1;
   display: grid;
-  gap: 34px;
+  grid-template-columns: 1fr;
+  gap: 50px;
   align-items: center;
 }
 
+/* =========================================
+   COLUMNA IZQUIERDA: CONTENIDO Y TEXTOS
+   ========================================= */
 .hero-copy {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-end;
-  z-index: 1;
-  margin-top: 240px;
+  z-index: 2;
+}
+
+.hero-copy .eyebrow {
+  color: var(--violet);
+  background: rgba(44, 58, 90, 0.08);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
 }
 
 .hero-copy h1 {
-  color: var(--violet--title);
-  text-shadow: 0px 2px 2px rgb(7, 39, 153);
-  font-size: 3.2rem;
+  color: var(--violet);
+  font-size: clamp(2.3rem, 5vw, 3.8rem);
+  line-height: 1.12;
+  margin: 0;
+  text-shadow: none;
 }
+
 .hero-copy h1 span {
   color: var(--pink);
-  text-shadow: 0px 2px 2px rgb(153, 7, 117);
+  text-shadow: none;
 }
 
 .hero-text {
-  max-width: 790px;
+  max-width: 540px;
   margin-top: 20px;
-  color: var(--paper);
-  font-size: 1.08rem;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+  color: var(--ink);
+  font-size: 1.12rem;
+  line-height: 1.6;
+  text-shadow: none;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 13px;
-  margin-top: 28px;
+  gap: 16px;
+  margin-top: 32px;
 }
 
-@media (min-width: 700px) {
-  .hero {
-    padding: 320px 0 86px;
-  }
+/* =========================================
+   COLUMNA DERECHA: FORMATO LIBRE (BLOB/ORGÁNICO)
+   ========================================= */
+/* 1. Ampliar el tamaño máximo del contenedor visual */
+.hero-visual {
+  position: relative;
+  width: 100%;
+  max-width: 680px; /* Aumentado de 560px a 680px */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .hero-visual:after {
-    background: linear-gradient(
-      rgba(25, 25, 25, 0.163) 15%,
-      rgba(33, 32, 32, 0.934)
-    );
-  }
+/* Capa decorativa desfasada de fondo (similar a la mancha amarilla de la referencia) */
+.blob-backdrop {
+  position: absolute;
+  inset: -15px -10px -20px 25px;
+  background: linear-gradient(135deg, var(--teal) 0%, var(--pink) 100%);
+  border-radius: 68% 32% 52% 48% / 42% 58% 42% 58%;
+  opacity: 0.85;
+  filter: blur(1px);
+  z-index: 0;
+  transform: rotate(-3deg);
+  transition: transform 0.4s ease;
+}
 
+/* 2. Proporción más panorámica y amplia para mostrar mejor a los cuatro alumnos */
+.blob-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11; /* Proporción más generosa en altura y ancho */
+  border-radius: 58% 42% 40% 60% / 52% 45% 55% 48%;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 24px 50px rgba(44, 58, 90, 0.22);
+  border: 4px solid var(--white);
+  background-color: var(--white);
+}
+
+/* Trazo blanco flotante / contorno decorativo */
+.blob-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+}
+
+/* Ajuste de la foto de los alumnos */
+.blob-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Centrado en las caras de los cuatro chicos */
+  object-position: center 38%;
+  transform: scale(1.03);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* =========================================
+   RESPONSIVE / MEDIA QUERIES
+   ========================================= */
+/* En pantallas extra grandes (monitores amplios), permitir que crezca aún más */
+@media (min-width: 1200px) {
+  .hero-visual {
+    max-width: 760px;
+  }
+}
+
+/* 3. Invertir y equilibrar el espacio en pantallas grandes (Desktop) */
+@media (min-width: 900px) {
   .hero-grid {
-    grid-template-columns: 1fr;
-  }
-  .hero-copy h1 {
-    font-size: 4.2rem;
+    /* Da más espacio a la imagen (1.2fr) frente al texto (1fr) */
+    grid-template-columns: 1fr 1.25fr;
+    gap: 40px;
+    align-items: center;
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 0 60px;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
   .hero-actions .button {
     width: 100%;
+  }
+
+  .blob-wrapper {
+    aspect-ratio: 1 / 1;
   }
 }

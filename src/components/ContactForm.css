@@ -13,9 +13,7 @@
   height: 100%;
   width: 100%;
   inset: 0;
-  background:
-    linear-gradient(rgba(48, 48, 48, 0.634) 35%, rgba(0, 0, 0, 0.724)),
-    url("../assets/circulo_escolar.webp") center / cover no-repeat;
+  background: var(--lavender);
 }
 
 .form-grid {
@@ -27,19 +25,18 @@
 
 .form-intro p {
   margin-top: 16px;
-  color: var(--paper);
+  color: var(--violet);
   max-width: 450px;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
 }
 
 .form-intro h2 {
-  color: var(--violet--title);
-  text-shadow: 0px 2px 2px rgb(7, 39, 153);
+  color: var(--violet);
+  text-shadow: 0px 2px 2px rgb(8, 28, 99);
 }
 
 .form-intro span {
   color: var(--pink);
-  text-shadow: 0px 2px 2px rgb(153, 7, 117);
+  text-shadow: 2px 2px 2px rgb(153, 7, 117);
 }
 
 .contact-form {
