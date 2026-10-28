@@ -167,8 +167,7 @@ export default function ContactForm() {
                     required
                   />
                   <span>
-                    Acepto los términos de privacidad y el uso de mis datos para
-                    contacto pedagógico e institucional.
+                    Acepto el uso de mis datos para contacto institucional.
                   </span>
                 </label>
               </div>
