@@ -1,6 +1,6 @@
 .community-banner {
   position: relative;
-  padding: 72px 0 88px;
+  padding: 60px 0 30px;
   background-color: var(--paper);
   overflow: hidden;
 }
@@ -161,7 +161,7 @@
    ========================================= */
 @media (min-width: 960px) {
   .community-banner {
-    padding: 96px 0 110px;
+    padding: 60px 0 30px;
   }
 
   .community-grid {
@@ -172,7 +172,7 @@
 
 @media (max-width: 600px) {
   .community-banner {
-    padding: 48px 0 60px;
+    padding: 48px 0 30px;
   }
 
   .community-badge {

@@ -3,7 +3,9 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
 }
-
+#valores {
+  padding: 60px 0 30px;
+  background-color: var(--paper);}
 .value {
   min-height: 154px;
   padding: 19px 15px;

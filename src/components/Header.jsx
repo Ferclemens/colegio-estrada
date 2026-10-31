@@ -23,7 +23,7 @@ export default function Header() {
           <a href="#valores">Valores</a>
         </nav>
         <a className="button button-primary header-cta" href="#consulta">
-          Consultar por el ingreso 2027
+          Ingreso 2027
         </a>
       </div>
     </header>

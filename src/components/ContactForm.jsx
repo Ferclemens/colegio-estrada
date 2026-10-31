@@ -74,13 +74,13 @@ export default function ContactForm() {
               </a>
             </p>
             <p>
-              Nivel Inicial: <span>3624 161234</span>
+              Nivel Inicial: <span>362 4161234</span>
             </p>
             <p>
-              Nivel Primario: <span>3624 361076</span>
+              Nivel Primario: <span>362 4361076</span>
             </p>
             <p>
-              Nivel Secundario: <span>3625 166260</span>
+              Nivel Secundario: <span>362 5166260</span>
             </p>
           </div>
         </div>
