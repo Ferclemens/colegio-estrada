@@ -4,8 +4,9 @@
   gap: 12px;
 }
 #valores {
-  padding: 60px 0 30px;
-  background-color: var(--paper);}
+  padding: 30px 0 30px;
+  background-color: var(--paper);
+}
 .value {
   min-height: 154px;
   padding: 19px 15px;
@@ -36,6 +37,9 @@
   .values-grid {
     grid-template-columns: repeat(4, 1fr);
   }
+  #valores {
+  padding: 60px 0 60px;
+}
 }
 
 @media (max-width:420px) {
