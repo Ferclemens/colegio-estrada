@@ -205,6 +205,13 @@ textarea {
 .spin {
   animation: spin 1s linear infinite;
 }
+.consultas-telefono {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
 
 @keyframes spin {
   from {
@@ -246,5 +253,14 @@ textarea {
   .field.level,
   .field.privacy-checkbox {
     grid-column: span 2;
+  }
+}
+@media (max-width: 410px) {
+  .consultas-telefono {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
   }
 }

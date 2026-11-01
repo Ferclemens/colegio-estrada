@@ -10,6 +10,7 @@ import {
 import initialLevelImage from "../assets/aula_nivel_inicial.webp";
 import primaryLevelImage from "../assets/aula _nivel_primario.webp";
 import secondaryLevelImage from "../assets/aula_nivel_secundario.webp";
+import AdultosLevelImage from "../assets/aula_nivel_adultos.webp";
 
 export const LOGO_URL =
   "https://cdn.lugc.link/f3d89e23-6256-487d-9770-6d55c1e918f5/";
@@ -35,6 +36,12 @@ export const levels = [
     alt: "Aula de Nivel Secundario",
     text: "Formación para pensar críticamente, construir proyectos y participar de manera comprometida.",
   },
+  {
+    title: "Nivel Adultos",
+    image: AdultosLevelImage,
+    alt: "Aula de Nivel Adultos",
+    text: "Formación para personas desde los 17 años que acrediten actividad laboral.",
+  }
 ];
 
 export const values = [

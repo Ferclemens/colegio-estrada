@@ -28,18 +28,6 @@ export default function Levels() {
               </div>
             </article>
           ))}
-          <article className="level-card adult-card">
-            <div className="level-body">
-              <h3>Bachillerato Libre para Adultos</h3>
-              <p>
-                Para personas desde los 17 años que acrediten actividad laboral.
-              </p>
-              <p>
-                Duración de 2 años o menos, según espacios curriculares previos
-                aprobados.
-              </p>
-            </div>
-          </article>
         </div>
       </div>
     </section>

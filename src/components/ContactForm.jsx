@@ -1,6 +1,8 @@
 import { useId, useRef, useState } from "react";
 import { Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 import "./ContactForm.css";
+import { createWhatsAppLink } from "../utils/whatsapp";
+import Button from "./Button";
 
 export default function ContactForm() {
   const uid = useId();
@@ -73,15 +75,42 @@ export default function ContactForm() {
                 inscripciones.jme@gmail.com
               </a>
             </p>
-            <p>
+            <div className="consultas-telefono">
+              <p>
               Nivel Inicial: <span>362 4161234</span>
-            </p>
-            <p>
+              </p>
+              <Button
+                href={createWhatsAppLink(
+                  "Hola, quiero consultar por el ingreso 2027 nivel inicial. ¿Podrían darme más información?", 543624161234
+                )}
+              >
+                Consultar
+              </Button>
+            </div>
+            <div className="consultas-telefono">
+              <p>
               Nivel Primario: <span>362 4361076</span>
-            </p>
-            <p>
+              </p>
+              <Button
+                href={createWhatsAppLink(
+                  "Hola, quiero consultar por el ingreso 2027 nivel primario. ¿Podrían darme más información?", 543624361076
+                )}
+              >
+                Consultar
+              </Button>
+            </div>
+            <div className="consultas-telefono">
+              <p>
               Nivel Secundario: <span>362 5166260</span>
-            </p>
+              </p>
+              <Button
+                href={createWhatsAppLink(
+                  "Hola, quiero consultar por el ingreso 2027 nivel secundario. ¿Podrían darme más información?", 543625166260
+                )}
+              >
+                Consultar
+              </Button>
+            </div>
           </div>
         </div>
 
