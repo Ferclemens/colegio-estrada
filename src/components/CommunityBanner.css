@@ -103,32 +103,26 @@
   margin: 0 0 14px;
   color: var(--violet);
   background: var(--paper);
-  padding: 6px 14px;
+  padding: 6px 14px 6px 0;
   border-radius: 999px;
   font-family: "Barlow Semi Condensed", Arial, sans-serif;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  margin-left: 0;
 }
 
 .community-copy h2 {
   color: var(--violet);
   font-size: clamp(2rem, 3.8vw, 3rem);
   line-height: 1.15;
-  margin: 0;
+  margin-bottom: 20px;
 }
 
 .community-copy h2 span {
   color: var(--pink);
   display: inline;
-}
-
-.community-description {
-  margin-top: 20px;
-  color: var(--ink);
-  font-size: 1.08rem;
-  line-height: 1.6;
 }
 
 /* Lista de ítems institucionales */
@@ -185,5 +179,4 @@
   .community-blob-wrapper {
     aspect-ratio: 1 / 1;
   }
-
 }

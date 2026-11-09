@@ -27,7 +27,7 @@ export default function CommunityBanner() {
               desde la primera infancia hasta la educación de adultos.
             </span>
           </h2>
-          <p className="community-description">
+          <p>
             Fomentamos espacios de encuentro, escucha y trabajo colaborativo.
             Cada nivel articula valores, saberes y metodologías pensadas para
             potenciar la autonomía de nuestros estudiantes en un entorno seguro

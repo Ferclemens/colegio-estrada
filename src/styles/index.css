@@ -1,9 +1,3 @@
-@font-face {
-  font-family: "JM Estrada";
-  src: url("https://cdn.lugc.link/0eaa03f6-bac0-4e88-8484-b7b564cd18f8/");
-  font-display: swap;
-}
-
 :root {
   --violet: #2c3a5a;
   --violet--title: #326eee;
@@ -17,6 +11,8 @@
   --line: #f4a99c;
   --focus: #f4a99c;
   --shadow: 0 6px 18px rgba(44, 58, 90, 0.1);
+  --fuente2: "JM Estrada", "Atkinson Hyperlegible", Arial, sans-serif;
+  --fuente: "Barlow Semi Condensed", Arial, sans-serif;
 }
 
 * {
@@ -31,7 +27,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "Atkinson Hyperlegible", Arial, sans-serif;
+  font-family: var(--fuente);
   font-size: 18px;
   line-height: 1.55;
 }
@@ -51,14 +47,16 @@ a {
 }
 
 .eyebrow {
-  margin: 0 0 10px;
-  color: var(--paper);
+  margin: 0 0 14px;
+  color: var(--violet);
+  padding: 6px 14px 6px 0;
+  border-radius: 999px;
   font-family: "Barlow Semi Condensed", Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  line-height: 1.1;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  margin-left: 0;
 }
 
 h1,
@@ -100,12 +98,12 @@ section {
 }
 
 .button {
-  min-height: 48px;
+  min-height: 42px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 9px;
-  padding: 5px 5px;
+  padding: 5px 10px;
   border: 1px solid var(--violet);
   border-radius: 12px;
   font:

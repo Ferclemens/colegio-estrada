@@ -6,7 +6,7 @@ export default function Levels() {
     <section className="levels" id="niveles" aria-labelledby="niveles-title">
       <div className="shell">
         <div className="section-heading">
-          <p>Elegí el recorrido</p>
+          <p className="eyebrow">Elegí el recorrido</p>
           <h2 id="niveles-title">Un espacio para cada etapa</h2>
           <p>
             Conocé las propuestas que acompañan el desarrollo de niñas, niños,

@@ -10,7 +10,7 @@
 .intro-lead {
   margin-top: 18px;
   font-size: 1.1rem;
-  color: var(--muted);
+  color: var(--ink);
   max-width: 570px;
 }
 
@@ -28,7 +28,8 @@
 }
 
 .mission-card:nth-child(2) {
-  background: var(--paper);
+  background: var(--lavender);
+  border: 1px solid var(--white);
 }
 
 .mission-card h3 {
@@ -36,7 +37,7 @@
   margin-bottom: 9px;
 }
 
-@media (min-width:700px) {
+@media (min-width: 700px) {
   .intro-grid {
     grid-template-columns: 1fr 1fr;
     align-items: center;

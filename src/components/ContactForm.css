@@ -1,4 +1,4 @@
-#consulta{
+#consulta {
   padding: 30px 0 30px;
   background-color: var(--paper);
 }
@@ -28,7 +28,6 @@
   color: var(--violet);
   background: rgba(44, 58, 90, 0.08);
   padding: 6px 14px;
-  border-radius: 999px;
   font-weight: 600;
   letter-spacing: 0.08em;
   margin-bottom: 14px;
@@ -38,20 +37,13 @@
   color: var(--violet);
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   line-height: 1.15;
-  margin: 0;
+  margin: 0 0 20px 0;
   text-shadow: none;
 }
 
 .form-intro h2 span {
   color: var(--pink);
   text-shadow: none;
-}
-
-.form-intro > p {
-  margin-top: 18px;
-  color: var(--ink);
-  font-size: 1.05rem;
-  line-height: 1.6;
 }
 
 .contact-direct-info {
@@ -206,12 +198,12 @@ textarea {
   animation: spin 1s linear infinite;
 }
 .consultas-telefono {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
 
 @keyframes spin {
   from {
@@ -226,12 +218,12 @@ textarea {
    RESPONSIVE EN ESCRITORIO
    ========================================= */
 @media (min-width: 900px) {
-  #consulta{
-  padding: 30px 0 30px;
-  background-color: var(--paper);
-}
+  #consulta {
+    padding: 30px 0 30px;
+    background-color: var(--paper);
+  }
   .conversion {
-     padding: 60px 60px;
+    padding: 60px 60px;
   }
 
   .form-grid {
@@ -264,12 +256,12 @@ textarea {
     gap: 8px;
   }
   .contact-direct-info {
-  margin-top: 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-self: center;
-  gap: 8px;
-  font-size: 1rem;
-}
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    gap: 8px;
+    font-size: 1rem;
+  }
 }
