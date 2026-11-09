@@ -28,7 +28,7 @@
 }
 
 .mission-card:nth-child(2) {
-  background: var(--lavender);
+  background: rgb(249, 209, 209);
   border: 1px solid var(--white);
 }
 
