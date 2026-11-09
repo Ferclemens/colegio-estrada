@@ -20,10 +20,11 @@ export default function ContactForm() {
     const formData = new FormData(formRef.current);
     const payload = Object.fromEntries(formData.entries());
 
-    // En desarrollo local apunta a Node (5000), en producción en Hostinger usa la ruta relativa
-    const API_URL = import.meta.env.DEV
-      ? "http://localhost:5000/api/send-email"
-      : "/api/send-email";
+    const API_URL =
+      import.meta.env.VITE_API_URL ||
+      (import.meta.env.DEV
+        ? "http://localhost:5000/api/send-email"
+        : "/api/send-email.php");
 
     // En ContactForm.jsx, dentro de handleSubmit:
     try {

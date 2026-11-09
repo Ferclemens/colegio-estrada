@@ -22,6 +22,10 @@ export default function Footer() {
           Construimos experiencias educativas desde la primera infancia hasta la
           educación de adultos.
         </p>
+        <p className="footer-copyright">
+          © 2026 José Manuel Estrada U.E.G.P N° 16. Todos los derechos
+          reservados.
+        </p>
       </div>
     </footer>
   );
